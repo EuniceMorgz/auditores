@@ -1,0 +1,20 @@
+{
+  "roles": [
+    { "id": 1, "role_name": "User", "description": "Requests the auditorium" },
+    { "id": 2, "role_name": "Reservation Admin", "description": "Reviews reservations" },
+    { "id": 3, "role_name": "Super Admin", "description": "Manages admin accounts" }
+  ],
+  "users": [
+    { "id": 1, "first_name": "Alex", "last_name": "Santos", "email": "alex.santos@carsu.edu.ph", "password": "demo123", "role_id": 1, "is_active": true, "created_at": "2026-09-01" },
+    { "id": 2, "first_name": "Jamie", "last_name": "Rivera", "email": "jamie.rivera@carsu.edu.ph", "password": "demo123", "role_id": 1, "is_active": true, "created_at": "2026-09-02" },
+    { "id": 3, "first_name": "Kwon", "last_name": "Ohyul", "email": "kwon.ohyul@carsu.edu.ph", "password": "admin123", "role_id": 3, "is_active": true, "created_at": "2026-08-15" }
+  ],
+  "reservations": [
+    { "id": 1, "user_id": 1, "event_name": "CCIS Students Leaders' Assembly", "reservation_date": "2026-10-24", "start_time": "09:00", "end_time": "12:00", "status": "Pending", "reason": "Student leadership planning and CCIS activity coordination", "created_at": "2026-10-19", "updated_at": "2026-10-19", "reviewed_by": null, "cancellation_reason": null },
+    { "id": 2, "user_id": 2, "event_name": "Information Technology Seminar", "reservation_date": "2026-10-27", "start_time": "13:00", "end_time": "16:00", "status": "Approved", "reason": "IT Seminar", "created_at": "2026-10-18", "updated_at": "2026-10-19", "reviewed_by": 3, "cancellation_reason": null },
+    { "id": 3, "user_id": 2, "event_name": "CAA Assembly", "reservation_date": "2026-10-30", "start_time": "13:00", "end_time": "16:00", "status": "Cancelled", "reason": "CAA student assembly", "created_at": "2026-10-17", "updated_at": "2026-10-20", "reviewed_by": null, "cancellation_reason": "Moved to online." }
+  ],
+  "blocked_schedules": [
+    { "id": 1, "block_date": "2026-10-29", "start_time": "08:00", "end_time": "17:00", "purpose": "Auditorium maintenance", "created_at": "2026-10-15" }
+  ]
+}
